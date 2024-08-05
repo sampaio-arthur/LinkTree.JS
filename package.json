@@ -1,0 +1,13 @@
+{
+    "name": "linktree-app",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "postcss css/site.css -o css/output.css"
+    },
+    "devDependencies": {
+      "tailwindcss": "^3.0.0",
+      "postcss": "^8.0.0",
+      "autoprefixer": "^10.0.0"
+    }
+  }
+  
