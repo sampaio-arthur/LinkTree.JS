@@ -2,10 +2,6 @@
 
 Este projeto é uma página de links pessoais que utiliza JavaScript e Tailwind CSS para criar uma experiência interativa e responsiva. Os links se movem na tela de acordo com a posição do cursor do mouse, proporcionando uma interface dinâmica e envolvente.
 
-## Demonstração
-
-![Demonstração da Página](file:///C:/Users/Usuario/Desktop/pc/LinkTreeJS/index.html)
-
 ## Tecnologias Utilizadas
 
 - **JavaScript**: Para a lógica de movimentação dos links e interatividade.
