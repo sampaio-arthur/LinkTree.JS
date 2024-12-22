@@ -42,7 +42,6 @@
             z-index: 2;
             transition: transform 0.2s ease-in-out;
             cursor: pointer;
-            /* box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px; */
             box-shadow: rgba(179, 45, 130, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
         }
         .profile-picture:hover {
@@ -113,6 +112,77 @@
             background: white;
             color: black;
         }
+
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .legend {
+        font-size: 24px;
+    }
+
+    .social-icons a {
+        font-size: 20px; 
+        text-align: center;
+        padding: 3px; 
+        width: 45px; 
+        margin-top: -10px;
+        
+    }
+
+    .link-container {
+        margin-top: 7px; 
+    }
+
+    .link-button {
+        font-size: 14px;
+        padding: 20px 70px; 
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .profile-picture {
+        width: 125px;
+        height: 125px;
+    }
+
+    .legend {
+        font-size: 28px;
+    }
+
+    .social-icons a {
+        font-size: 22px; 
+        padding: 9px; 
+        width: 60px; 
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .link-container {
+        margin-top: -15px; 
+    }
+
+    .link-button {
+        font-size: 60px;
+        padding: 20px 40px; 
+        width: 80%;
+        max-width: 500px; 
+    }
+}
+
+
+
     </style>
 </head>
 <body>
