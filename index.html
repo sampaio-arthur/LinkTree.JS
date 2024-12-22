@@ -1,32 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sampaio Arthur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/output.css" />
     <link rel="stylesheet" href="styles/LinktreeApp.styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         body {
             margin: 0;
             overflow: hidden;
             font-family: Arial, sans-serif;
-            height: 75vh;
+            height: 100vh;
             display: flex;
+            justify-content: center; 
             align-items: center;
-            justify-content: center;
             position: relative;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1;
+        }
+
+        .profile-picture {
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%; 
+            object-fit: cover; 
+            position: relative;
+            z-index: 2;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+            /* box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px; */
+            box-shadow: rgba(179, 45, 130, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+        .profile-picture:hover {
+            transform: scale(1.2);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            gap: 20px; 
+            z-index: 2;
+            position: relative;
+            
+        }
+
+        .legend {
+            font-family: poppins;
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin: 10px 0;
+            text-decoration: overline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: rgb(255, 255, 255);
+            font-size: 19px;
+            transition: transform 0.2s ease-in-out;
+            background-color: #0000005d;
+            border: 1px solid rgb(255, 255, 255);
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            background: rgba(7, 6, 49, 0.747);
+        }
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 2;
+        }
+
+        .link-button {
+            font-family: poppins;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 20px 20px;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 9px;
+            background: rgba(0, 0, 0, 0.637);;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover {
+            background: white;
+            color: black;
         }
     </style>
 </head>
 <body>
     <div class="background"></div>
-    <div class="container">
-        <main role="main" class="pb-3" id="main-content">
-        </main>
+    <div class="container" id="main-content">
+        <img src="../LinkTree.JS/images/fototerno.JPG" alt="Minha Foto" class="profile-picture">
+        <div class="legend">Arthur Sampaio</div>
+        <div class="social-icons">
+            <a href="https://github.com/sampaio-arthur" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sampaio-arthur/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/5548999895574" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:arthurbarrasampaio@gmail.com" target="_blank" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/sampaio__arthur/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="http://lattes.cnpq.br/4591176014728041" target="_blank" aria-label="Lattes"><i class="fas fa-graduation-cap"></i></a>
+        </div>
     </div>
-
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
@@ -37,7 +139,6 @@
             const moveY = (e.clientY / window.innerHeight) * 10 - 5;
             background.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
-       
     </script>
 </body>
 </html>
