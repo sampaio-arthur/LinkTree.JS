@@ -48,17 +48,17 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
 }
 
 .social-icons a {
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     transition: transform 0.2s ease-in-out;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -95,7 +95,7 @@ body {
     color: black;
 }
 
-/* Responsividade */
+/* Responsividade
 @media (max-width: 600px) {
     .profile-picture {
         width: 90px;
@@ -149,4 +149,4 @@ body {
         font-size: 16px;
         padding: 12px 24px;
     }
-}
+} */
