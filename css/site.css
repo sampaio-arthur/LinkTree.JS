@@ -3,57 +3,150 @@
 @tailwind utilities;
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #121212;
+    color: white;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin: 10px 0;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-a:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.navbar, .footer {
-    display: none;
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    background: url('../images/background.jpg') no-repeat center center fixed;
-    background-size: cover; 
-    transition: transform 0.1s ease-out; 
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+}
+
+.legend {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    background: rgba(7, 6, 49, 0.747);
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.link-button {
+    font-size: 16px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 9px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.link-button:hover {
+    background: white;
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .profile-picture {
+        width: 90px;
+        height: 90px;
+    }
+    .legend {
+        font-size: 18px;
+    }
+    .social-icons a {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .link-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+    .legend {
+        font-size: 20px;
+    }
+    .social-icons a {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .link-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 20px;
+    }
+    .legend {
+        font-size: 24px;
+    }
+    .social-icons a {
+        font-size: 18px;
+    }
+    .link-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
